@@ -4,6 +4,11 @@ import warnings
 import os
 import zipfile
 from datetime import datetime
+from fastapi import FastAPI
+import uvicorn
+from pydantic import BaseModel
+from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 from engineering_team.crew import EngineeringTeam
 
@@ -11,6 +16,16 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
 # Create output directory if it doesn't exist
 os.makedirs('output', exist_ok=True)
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 requirements = """
 A simple account management system for a trading simulation platform.
@@ -26,6 +41,9 @@ The system should prevent the user from withdrawing funds that would leave them 
 """
 module_name = "accounts.py"
 class_name = "Account"
+
+class ProjectRequirements(BaseModel):
+    requirements: str
 
 def create_zip_archive():
     output_dir = "output"
@@ -43,6 +61,7 @@ def create_zip_archive():
                     zipf.write(full_path, arcname=file)
 
     print(f"Created ZIP archive at: {zip_path}")
+    return zip_path
 
 def run():
     """
@@ -58,6 +77,23 @@ def run():
     result = EngineeringTeam().crew().kickoff(inputs=inputs)
     create_zip_archive()
 
+@app.post("/generate-project")
+async def generate_project(req: ProjectRequirements):
+    requirements = req.requirements
+    inputs = {"requirements": requirements,
+              "module_name": "accounts.py",
+              "class_name": "Account"}
+
+    EngineeringTeam().crew().kickoff(inputs=inputs)
+    zip_path = create_zip_archive()
+
+    return FileResponse(zip_path, filename="zip_file_final.zip") 
+    # return StreamingResponse(
+    #     open(zip_path, "rb"),
+    #     media_type="application/zip",
+    #     headers={"Content-Disposition": "attachment; filename=final_delivery.zip"}
+    # )
 
 if __name__ == "__main__":
-    run()
+    # run()
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

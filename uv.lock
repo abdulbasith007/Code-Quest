@@ -795,12 +795,14 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "crewai", extra = ["tools"] },
+    { name = "fastapi" },
     { name = "gradio" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "crewai", extras = ["tools"], specifier = ">=0.108.0,<1.0.0" },
+    { name = "fastapi", specifier = ">=0.115.11" },
     { name = "gradio", specifier = ">=5.22.0" },
 ]
 
