@@ -2,6 +2,7 @@
 import sys
 import warnings
 import os
+import zipfile
 from datetime import datetime
 
 from engineering_team.crew import EngineeringTeam
@@ -26,6 +27,22 @@ The system should prevent the user from withdrawing funds that would leave them 
 module_name = "accounts.py"
 class_name = "Account"
 
+def create_zip_archive():
+    output_dir = "output"
+    zip_path = os.path.join(output_dir, "final_delivery.zip")
+
+    if os.path.exists(zip_path):
+        os.remove(zip_path)
+
+    # Create the zip file
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zipf:
+        for root, dirs, files in os.walk(output_dir):
+            for file in files:
+                if file != "final_delivery.zip":  # avoid recursion
+                    full_path = os.path.join(root, file)
+                    zipf.write(full_path, arcname=file)
+
+    print(f"Created ZIP archive at: {zip_path}")
 
 def run():
     """
@@ -39,6 +56,7 @@ def run():
 
     # Create and run the crew
     result = EngineeringTeam().crew().kickoff(inputs=inputs)
+    create_zip_archive()
 
 
 if __name__ == "__main__":
