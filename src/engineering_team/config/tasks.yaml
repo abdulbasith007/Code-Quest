@@ -48,3 +48,22 @@ test_task:
   context:
     - code_task
   output_file: output/test_{module_name}
+
+documentation_task:
+  description: >
+    Generate clear and complete documentation for the full system:
+    - the design from design_task
+    - the backend implementation from code_task
+    - the frontend UI from frontend_task
+    - the unit tests from test_task
+    The documentation must describe how the system works end-to-end, how modules interact, how to run it, and how a developer can extend it.
+  expected_output: >
+    A markdown file containing the full documentation.
+    IMPORTANT: Output only markdown, no code fences except when showing code snippets.
+  agent: documentation_engineer
+  context:
+    - design_task
+    - code_task
+    - frontend_task
+    - test_task
+  output_file: output/{module_name}_docs.md

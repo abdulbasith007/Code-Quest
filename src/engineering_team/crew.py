@@ -50,6 +50,13 @@ class EngineeringTeam():
             max_retry_limit=3 
         )
 
+    @agent
+    def documentation_engineer(self) -> Agent:
+        return Agent(
+            config=self.agents_config['documentation_engineer'],
+            verbose=True
+        )
+    
     @task
     def design_task(self) -> Task:
         return Task(
@@ -74,6 +81,12 @@ class EngineeringTeam():
             config=self.tasks_config['test_task'],
         )   
 
+    @task
+    def documentation_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['documentation_task'],
+        ) 
+      
     @crew
     def crew(self) -> Crew:
         """Creates the research crew"""
