@@ -1,7 +1,42 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+import logging
+from crewai.task import TaskOutput
 
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
+# Remove existing handlers (like StreamHandler from CrewAI)
+if logger.hasHandlers():
+    logger.handlers.clear()
+
+# Create handlers
+file_handler = logging.FileHandler('app.log')
+console_handler = logging.StreamHandler()
+
+# Create formatter and add it to handlers
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+console_handler.setFormatter(formatter)
+
+# Add handlers to the logger
+logger.addHandler(file_handler)
+logger.addHandler(console_handler)
+
+def on_task_complete(output: TaskOutput):
+    logging.info(f"Task completed: {output.name}")
+    logging.info(f"Agent: {output.agent}")
+    # logging.info(f"Raw Output: {output.raw}")
+    logging.info(f"Summary: {output.summary}")
+
+def on_agent_step(step):
+    print("biiiiiiiii")
+    # print(dir(step))
+    # logging.info(f"🔵 Agent Step → {step.get('agent_name', 'Unknown')} executed an action")
+    logging.info(f"   Thought: {step.get('thought')}")
+    logging.info(f"   Output: {step.get('output')}")
+    # logging.info(f"   Observation: {step.get('observation')}")
 
 @CrewBase
 class EngineeringTeam():
@@ -151,4 +186,6 @@ class EngineeringTeam():
             process=Process.hierarchical,
             manager_agent=orchestrator_agent,
             verbose=True,
+            task_callback=on_task_complete,
+            step_callback=on_agent_step,
         )
