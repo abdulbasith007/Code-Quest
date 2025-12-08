@@ -44,7 +44,7 @@ Users can deposit money into their wallet.
 Users can spend money from their wallet.
 The program should show the current balance of the wallet.
 """
-module_name = "wallet.py"
+module_name = "wallet"
 class_name = "Wallet"
 
 class ProjectRequirements(BaseModel):

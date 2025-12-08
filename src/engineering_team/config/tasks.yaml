@@ -20,16 +20,16 @@ code_task:
   agent: backend_engineer
   context:
     - design_task
-  output_file: output/{module_name}
+  output_file: output/{module_name}.py
 
 frontend_task:
   description: >
-    Write a gradio UI in a module app.py that demonstrates the given backend class in {module_name}.
+    Write a gradio UI in a module app.py that demonstrates the given backend class in {module_name}.py.
     Assume there is only 1 user, and keep the UI very simple indeed - just a prototype or demo.
     Here are the requirements: {requirements}
   expected_output: >
     A gradio UI in module app.py that demonstrates the given backend class.
-    The file should be ready so that it can be run as-is, in the same directory as the backend module, and it should import the backend class from {module_name}.
+    The file should be ready so that it can be run as-is, in the same directory as the backend module, and it should import the backend class from {module_name}.py.
     IMPORTANT: Output ONLY the raw Python code without any markdown formatting, code block delimiters, or backticks.
     The output should be valid Python code that can be directly saved to a file and executed.
   agent: frontend_engineer
@@ -39,15 +39,15 @@ frontend_task:
 
 test_task:
   description: >
-    Write unit tests for the given backend module {module_name} and create a test_{module_name} in the same directory as the backend module.
+    Write unit tests for the given backend module {module_name}.py and create a test_{module_name}.py in the same directory as the backend module.
   expected_output: >
-    A test_{module_name} module that tests the given backend module.
+    A test_{module_name}.py module that tests the given backend module.
     IMPORTANT: Output ONLY the raw Python code without any markdown formatting, code block delimiters, or backticks.
     The output should be valid Python code that can be directly saved to a file and executed.
   agent: test_engineer
   context:
     - code_task
-  output_file: output/test_{module_name}
+  output_file: output/test_{module_name}.py
 
 documentation_task:
   description: >
@@ -83,7 +83,7 @@ orchestrate_task:
 
 review_code_task:
   description: >
-    Review code in {module_name} and provide actionable improvements.
+    Review code in {module_name}.py and provide actionable improvements.
   expected_output: >
     Structured code review comments.
   agent: review_engineer
@@ -99,5 +99,5 @@ refactor_code_task:
   agent: refactor_engineer
   context:
     - review_code_task
-  output_file: output/{module_name}
+  output_file: output/{module_name}_refactored.py
 
