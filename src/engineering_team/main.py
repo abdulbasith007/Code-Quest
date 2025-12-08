@@ -95,5 +95,5 @@ async def generate_project(req: ProjectRequirements):
     # )
 
 if __name__ == "__main__":
-    # run()
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    run()
+    # uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

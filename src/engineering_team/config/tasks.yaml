@@ -67,3 +67,37 @@ documentation_task:
     - frontend_task
     - test_task
   output_file: output/{module_name}_docs.md
+
+orchestrate_task:
+  description: >
+    Plan and manage all subtasks. Call design, code, test, review, refactor agents
+    as needed until work meets release criteria.
+  expected_output: >
+    Complete working system produced under orchestrator direction.
+  agent: orchestrator
+  context:
+    - design_task
+    - code_task
+    - frontend_task
+    - test_task
+
+review_code_task:
+  description: >
+    Review code in {module_name} and provide actionable improvements.
+  expected_output: >
+    Structured code review comments.
+  agent: review_engineer
+  context:
+    - code_task
+  output_file: output/{module_name}_review.md
+
+refactor_code_task:
+  description: >
+    Apply the code review feedback to update the code.
+  expected_output: >
+    Improved python code only.
+  agent: refactor_engineer
+  context:
+    - review_code_task
+  output_file: output/{module_name}
+
