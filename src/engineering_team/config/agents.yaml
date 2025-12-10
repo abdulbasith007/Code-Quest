@@ -9,7 +9,7 @@ engineering_lead:
     The module should be named {module_name} and the class should be named {class_name}
   backstory: >
     You're a seasoned engineering lead with a knack for writing clear and concise designs.
-  llm: openai/gpt-4o-mini
+  llm: openai/o3-mini
 
 
 backend_engineer:
@@ -24,7 +24,7 @@ backend_engineer:
     You're a seasoned python engineer with a knack for writing clean, efficient code.
     You follow the design instructions carefully.
     You produce 1 python module named {module_name} that implements the design and achieves the requirements.
-  llm: openai/gpt-4o-mini
+  llm: openai/o3-mini
 
 frontend_engineer:
   role: >
@@ -35,7 +35,7 @@ frontend_engineer:
   backstory: >
     You're a seasoned python engineer highly skilled at writing simple Gradio UIs for a backend class.
     You produce a simple gradio UI that demonstrates the given backend class; you write the gradio UI in a module app.py that is in the same directory as the backend module {module_name}.
-  llm: openai/gpt-4o-mini
+  llm: openai/o3-mini
 
 test_engineer:
   role: >
@@ -44,7 +44,7 @@ test_engineer:
     Write unit tests for the given backend module {module_name} and create a test_{module_name} in the same directory as the backend module.
   backstory: >
     You're a seasoned QA engineer and software developer who writes great unit tests for python code.
-  llm: openai/gpt-4o-mini
+  llm: openai/o3-mini
 
 documentation_engineer:
   role: >
@@ -67,6 +67,12 @@ orchestrator:
   backstory: >
     A highly technical engineering manager capable of iterative improvement.
   llm: openai/gpt-4o
+  extra_instructions: |
+    After each delegation, summarize:
+    - Which task was delegated
+    - To which agent
+    - Why this agent
+    - What next step is planned
 
 review_engineer:
   role: >
@@ -77,7 +83,7 @@ review_engineer:
     actionable review feedback without rewriting the whole module.
   backstory: >
     You are a world-class reviewer who leaves helpful, structured comments.
-  llm: openai/gpt-4o-mini
+  llm: openai/o3-mini
 
 refactor_engineer:
   role: >
@@ -87,4 +93,4 @@ refactor_engineer:
     Output only updated code.
   backstory: >
     You take messy code and make it beautiful.
-  llm: openai/gpt-4o-mini
+  llm: openai/o3-mini
