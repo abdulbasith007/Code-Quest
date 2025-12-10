@@ -1,0 +1,167 @@
+2025-12-07 23:33:11,212 - INFO - Crew is being created
+2025-12-07 23:33:11,233 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:33:17,080 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:33:17,102 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:33:17,109 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:33:20,456 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:33:20,472 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:33:20,472 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:33:22,633 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:33:22,636 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:33:22,637 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:33:24,520 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:33:24,520 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:33:24,538 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:33:27,586 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:33:27,601 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:33:27,617 - INFO - 
+LiteLLM completion() model= o3-mini; provider = openai
+2025-12-07 23:33:50,506 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:33:50,506 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:33:50,523 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:33:56,269 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:33:56,285 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:33:56,285 - INFO - Task completed: design_task
+2025-12-07 23:33:56,285 - INFO - Agent: Chief Engineering Orchestrator
+
+2025-12-07 23:33:56,285 - INFO - Summary: Take the high level requirements described here and prepare a...
+2025-12-07 23:33:56,320 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:33:59,315 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:33:59,327 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:33:59,349 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:34:00,938 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:34:00,954 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:34:00,970 - INFO - 
+LiteLLM completion() model= o3-mini; provider = openai
+2025-12-07 23:34:11,353 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:34:11,357 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:34:11,364 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:34:15,344 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:34:15,344 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:34:15,344 - INFO - Task completed: code_task
+2025-12-07 23:34:15,344 - INFO - Agent: Chief Engineering Orchestrator
+
+2025-12-07 23:34:15,344 - INFO - Summary: Write a python module that implements the design described by...
+2025-12-07 23:34:15,375 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:34:20,162 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:34:20,178 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:34:20,201 - INFO - 
+LiteLLM completion() model= o3-mini; provider = openai
+2025-12-07 23:34:39,703 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:34:39,703 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:34:39,721 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:34:43,428 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:34:43,432 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:34:43,446 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:34:47,164 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:34:47,167 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:34:47,180 - INFO - Task completed: frontend_task
+2025-12-07 23:34:47,180 - INFO - Agent: Chief Engineering Orchestrator
+
+2025-12-07 23:34:47,180 - INFO - Summary: Write a gradio UI in a module app.py that demonstrates...
+2025-12-07 23:34:47,199 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:34:49,535 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:34:49,539 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:34:49,564 - INFO - 
+LiteLLM completion() model= o3-mini; provider = openai
+2025-12-07 23:35:03,468 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:35:03,468 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:35:03,484 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:35:05,363 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:35:05,363 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:35:05,387 - INFO - Task completed: test_task
+2025-12-07 23:35:05,387 - INFO - Agent: Chief Engineering Orchestrator
+
+2025-12-07 23:35:05,387 - INFO - Summary: Write unit tests for the given backend module wallet.py and...
+2025-12-07 23:35:05,423 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:35:06,637 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:35:06,641 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:35:06,654 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:35:14,383 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:35:14,407 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:35:14,430 - INFO - Task completed: documentation_task
+2025-12-07 23:35:14,430 - INFO - Agent: Chief Engineering Orchestrator
+
+2025-12-07 23:35:14,430 - INFO - Summary: Generate clear and complete documentation for the full system: -...
+2025-12-07 23:35:14,495 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:35:19,130 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:35:19,130 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:35:19,145 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:35:28,996 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:35:29,009 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:35:29,021 - INFO - Task completed: orchestrate_task
+2025-12-07 23:35:29,021 - INFO - Agent: Chief Engineering Orchestrator
+
+2025-12-07 23:35:29,021 - INFO - Summary: Plan and manage all subtasks. Call design, code, test, review,...
+2025-12-07 23:35:29,046 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:35:35,759 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:35:35,759 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:35:35,794 - INFO - 
+LiteLLM completion() model= o3-mini; provider = openai
+2025-12-07 23:35:51,540 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:35:51,542 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:35:51,592 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:35:54,063 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:35:54,065 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:35:54,075 - INFO - Task completed: review_code_task
+2025-12-07 23:35:54,075 - INFO - Agent: Chief Engineering Orchestrator
+
+2025-12-07 23:35:54,075 - INFO - Summary: Review code in wallet.py and provide actionable improvements.
+...
+2025-12-07 23:35:54,097 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:35:57,737 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:35:57,742 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:35:57,762 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:36:00,321 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:36:00,332 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:36:00,346 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:36:02,849 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:36:02,857 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:36:02,873 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:36:05,091 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:36:05,091 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:36:05,125 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:36:07,556 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:36:07,562 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:36:07,572 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:36:10,769 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:36:10,769 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:36:10,815 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:36:13,075 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:36:13,075 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:36:13,125 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-12-07 23:36:16,607 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 23:36:16,623 - INFO - Wrapper: Completed Call, calling success_handler
+2025-12-07 23:36:16,639 - INFO - Task completed: refactor_code_task
+2025-12-07 23:36:16,639 - INFO - Agent: Chief Engineering Orchestrator
+
+2025-12-07 23:36:16,639 - INFO - Summary: Apply the code review feedback to update the code.
+...
