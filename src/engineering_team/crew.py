@@ -31,11 +31,11 @@ def on_task_complete(output: TaskOutput):
     logging.info(f"Summary: {output.summary}")
 
 def on_agent_step(step):
-    print("biiiiiiiii")
+    logging.info("Agent Step completed")
     # print(dir(step))
     # logging.info(f"🔵 Agent Step → {step.get('agent_name', 'Unknown')} executed an action")
-    logging.info(f"   Thought: {step.get('thought')}")
-    logging.info(f"   Output: {step.get('output')}")
+    # logging.info(f"   Thought: {step.get('thought')}")
+    # logging.info(f"   Output: {step.get('output')}")
     # logging.info(f"   Observation: {step.get('observation')}")
 
 @CrewBase

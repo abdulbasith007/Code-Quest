@@ -86,8 +86,8 @@ def run():
 async def generate_project(req: ProjectRequirements):
     requirements = req.requirements
     inputs = {"requirements": requirements,
-              "module_name": "accounts.py",
-              "class_name": "Account"}
+              "module_name": "wallet",
+              "class_name": "Wallet"}
 
     EngineeringTeam().crew().kickoff(inputs=inputs)
     zip_path = create_zip_archive()
@@ -100,5 +100,5 @@ async def generate_project(req: ProjectRequirements):
     # )
 
 if __name__ == "__main__":
-    run()
-    # uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    # run()
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
